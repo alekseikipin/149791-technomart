@@ -2,11 +2,121 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
+    <title>Техномарт. Материалы, техника и инструменты</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <header >
+      <div class="header-top">
+        <a class="logo">ТЕХНОМАРТ</a>
+        <input type="text" id="search" placeholder="Поиск">
+        <a class="bookmarks" href="#">Закладки: <sapn class="bookmarks-counter">0</sapn></a>
+        <a class="cart" href="#">Корзина: <sapn class="cart-counter">0</sapn></a>
+        <a class="buy" href="#">Оформить заказ</a>
+      </div>
+      <div class="header-middle">
+        <p>Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта</p>
+        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+        <caption>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</caption>
+        <a class="sign-in" href="#">Войти</a>>
+        <a class="sigh-up">Регистрация</a>
+    </div>
+    <nav class="header-bottom">
+      <ul class="main-menu">
+        <li><a class="main-menu-item" href="#">Главная</a></li>
+        <li><a class="main-menu-item" href="#">Компания</a></li>
+        <li><a class="main-menu-item" href="#">Каталог</a></li>
+        <li><a class="main-menu-item" href="#">Новости</a></li>
+        <li><a class="main-menu-item" href="#">Спецпредложения</a></li>
+        <li><a class="main-menu-item" href="#">Доставка</a></li>
+        <li><a class="main-menu-item" href="#">Контакты</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main>
+      <section>
+        <div class="category-card">
+          <p class="category-card-header">Материалы</p>
+          <a class="category-card-button" href="#">На любой вкус</a>
+        </div>
+        <div class="category-card">
+          <p class="category-card-header">Инструмент</p>
+          <a class="category-card-button" href="#">На все случаи</a>
+        </div>
+        <div class="category-card">
+          <p class="category-card-header">Техника</p>
+          <a class="category-card-button" href="#">Для стройки</a>
+        </div>
+        <div class="slider">
+          <input type="radio" id="btn-1" name="toggle" checked>
+          <input type="radio" id="btn-2" name="toggle">
+          <div class="slider-controls">
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>
+          </div>
+          <div class="slider-inner">
+              <div class="slider-slides">
+                  <img src="img/banners/banner-1.jpg" width="620" height="266" alt="perforators">
+                  <img src="img/banners/banner-2.jpg" width="620" height="266" alt="drils">
+              </div>
+          </div>
+          <div class="category-card">
+            <p class="category-card-header">Скидка 50%</p>
+            <a class="category-card-button" href="#">На 350 товаров</a>
+          </div>
+          <div class="category-card">
+            <p class="category-card-header">Доставка</p>
+            <a class="category-card-button" href="#">Бесплатно</a>
+          </div>
+        </div>
+      </section>
+      <section class="popular-items">
+        <div class="section-header">
+          <h2>Популярные товары:</h2>
+          <a class="button" href="#">Все популярыне товары</a>
+        </div>
+        <div class="popular-items-card">
+          <a class="popular-items-button-buy" href="#">Купить</a>
+          <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+          <img src="img/tools/tool-1.jpg" width="184" height="184" alt="Перфоратор BOSCH BFG 9000">
+          <p class="popular-items-old-price">32500 Р.</p>
+          <p class="popular-items-new-price">25500 Р.</p>
+        </div>
+        <div class="popular-items-card">
+          <a class="popular-items-button-buy" href="#">Купить</a>
+          <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+          <img src="img/tools/tool-2.jpg" width="184" height="184" alt="Перфоратор BOSCH BFG 3000">
+          <p class="popular-items-old-price">32500 Р.</p>
+          <p class="popular-items-new-price">25500 Р.</p>
+        </div>
+        <div class="popular-items-card">
+          <a class="popular-items-button-buy" href="#">Купить</a>
+          <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+          <img src="img/tools/tool-3.jpg" width="184" height="184" alt="Перфоратор BOSCH BFG 6000">
+          <p class="popular-items-old-price">32500 Р.</p>
+          <p class="popular-items-new-price">25500 Р.</p>
+        </div>
+        <div class="popular-items-card">
+          <a class="popular-items-button-buy" href="#">Купить</a>
+          <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+          <img src="img/tools/tool-4.jpg" width="184" height="184" alt="Перфоратор BOSCH BFG 2000">
+          <p class="popular-items-old-price">32500 Р.</p>
+          <p class="popular-items-new-price">25500 Р.</p>
+        </div>
+      </section>
+      <section class="popular-items">
+          <div class="section-header">
+            <h2>Популярные производители</h2>
+            <a class="button" href="#">Все популярыне производители</a>
+          </div>
+          <div class="popular-company">
+            <a>
+              <img src="img/popular-companys/bosch.jpg" width="220" height="145">
+            </a>
+          </div>
+      </section>
+    </main>
   </body>
 </html>
