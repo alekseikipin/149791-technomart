@@ -11,21 +11,22 @@
   <header>
     <div class="header-top">
       <a class="logo">ТЕХНОМАРТ</a>
-      <input type="text" id="search" placeholder="Поиск">
+      <div class="search">
+        <input type="search" id="search" placeholder="Поиск">
+        <input type="submit">
+      </div>
       <a class="bookmarks" href="#">Закладки:
-        <sapn class="bookmarks-counter">0</sapn>
+        <span class="bookmarks-counter">0</span>
       </a>
       <a class="cart" href="#">Корзина:
-        <sapn class="cart-counter">0</sapn>
+        <span class="cart-counter">0</span>
       </a>
       <a class="buy" href="#">Оформить заказ</a>
     </div>
     <div class="header-middle">
-      <p>Интернет-магазин
-        <br> строительных материалов
-        <br> и инструментов для ремонта</p>
+      <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
       <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-      <caption>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</caption>
+      <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       <a class="sign-in" href="#">Войти</a>>
       <a class="sigh-up">Регистрация</a>
     </div>
@@ -57,6 +58,7 @@
   </header>
   <main>
     <section>
+      <h2 class="visually-hidden">Продукция и услуги</h2>
       <div class="category-card">
         <p class="category-card-header">Материалы</p>
         <a class="category-card-button" href="#">На любой вкус</a>
@@ -100,29 +102,37 @@
         <a class="button" href="#">Все популярыне товары</a>
       </div>
       <div class="popular-items-card">
-        <a class="popular-items-button-buy" href="#">Купить</a>
-        <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+        <div class="popular-items-card-buttons">
+          <a class="popular-items-button-buy" href="#">Купить</a>
+          <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+        </div>
         <img src="img/tools/tool-1.jpg" width="184" height="184" alt="Перфоратор BOSCH BFG 9000">
         <p class="popular-items-old-price">32500 Р.</p>
         <p class="popular-items-new-price">25500 Р.</p>
       </div>
       <div class="popular-items-card">
-        <a class="popular-items-button-buy" href="#">Купить</a>
-        <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+        <div class="popular-items-card-buttons">
+          <a class="popular-items-button-buy" href="#">Купить</a>
+          <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+        </div>
         <img src="img/tools/tool-2.jpg" width="184" height="184" alt="Перфоратор BOSCH BFG 3000">
         <p class="popular-items-old-price">22500 Р.</p>
         <p class="popular-items-new-price">15500 Р.</p>
       </div>
       <div class="popular-items-card">
-        <a class="popular-items-button-buy" href="#">Купить</a>
-        <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+        <div class="popular-items-card-buttons">
+          <a class="popular-items-button-buy" href="#">Купить</a>
+          <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+        </div>
         <img src="img/tools/tool-3.jpg" width="184" height="184" alt="Перфоратор BOSCH BFG 6000">
         <p class="popular-items-old-price">30500 Р.</p>
         <p class="popular-items-new-price">25500 Р.</p>
       </div>
       <div class="popular-items-card">
-        <a class="popular-items-button-buy" href="#">Купить</a>
-        <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+        <div class="popular-items-card-buttons">
+          <a class="popular-items-button-buy" href="#">Купить</a>
+          <a class="popular-items-button-bookmarks" href="#">В закладки</a>
+        </div>
         <img src="img/tools/tool-4.jpg" width="184" height="184" alt="Перфоратор BOSCH BFG 2000">
         <p class="popular-items-new-price">25500 Р.</p>
       </div>
@@ -164,14 +174,42 @@
       <p>Хороший интернет-магазин отличается от плохого не только ценами!
         <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       <div class="container-service">
+        <input type="radio" id="service-1" name="service" checked>
+        <input type="radio" id="service-2" name="service">
+        <input type="radio" id="service-3" name="service">
         <div class="service-controls">
           <label for="service-1">Доставка</label>
           <label for="service-2">Гарантия</label>
           <label for="service-3">Кредит</label>
         </div>
-        <input type="radio" id="service-1" name="service" checked>
-        <input type="radio" id="service-2" name="service">
-        <input type="radio" id="service-3" name="service">
+        <div class="container-service-description">
+          <p class="container-service-description-header">Доставка</p>
+          <p class="container-service-description-body">
+            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая
+            его на ваш этаж!
+          </p>
+        </div>
+        <div class="container-service-description">
+          <p class="container-service-description-header">Гарантия</p>
+          <p class="container-service-description-body">
+            Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда
+            можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+          </p>
+        </div>
+        <div class="container-service-description">
+          <p class="container-service-description-header">Гарантия</p>
+          <p class="container-service-description-body">
+            Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда
+            можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+          </p>
+        </div>
+        <div class="container-service-description">
+          <p class="container-service-description-header">Кредит</p>
+          <p class="container-service-description-body">
+            Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+          </p>
+          <a class="button" href="#">Отправить заявку</a>
+        </div>
       </div>
     </section>
     <section class="section-about">
@@ -231,7 +269,7 @@
           <a class="footer-menu-bottom-item" href="">Спецпредложения</a>
         </li>
       </ul>
-      <footer>
+      <div class="sub-footer">
         <p>© 2010–2017 Компания «Техномарт»
           <br>Все права защищены</p>
         <ul>
@@ -253,7 +291,7 @@
           <br>
           <a class="footer-menu-bottom-item" href="#">htmlacademy.ru</a>
         </p>
-      </footer>
+      </div>
     </footer>
   </main>
 </body>
