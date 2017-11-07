@@ -5,30 +5,36 @@
   <meta charset="utf-8">
   <title>Техномарт. Материалы, техника и инструменты</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <div class="header-top">
-      <a class="logo">ТЕХНОМАРТ</a>
+      <a class="logo" href="#">ТЕХНОМАРТ</a>
       <div class="search">
+        <input type="submit" id="submit" value="">
         <input type="search" id="search" placeholder="Поиск">
-        <input type="submit">
       </div>
-      <a class="bookmarks" href="#">Закладки:
-        <span class="bookmarks-counter">0</span>
+      <a class="header-navigation-button" href="#">
+        <span class="header-icon bookmarks"></span>Закладки:<span class="bookmarks-counter">&nbsp;0</span>
       </a>
-      <a class="cart" href="#">Корзина:
-        <span class="cart-counter">0</span>
+      <a class="header-navigation-button" href="#">
+        <span class="header-icon cart"></span>Корзина:<span class="cart-counter">&nbsp;0</span>
       </a>
-      <a class="buy" href="#">Оформить заказ</a>
+      <a class="header-navigation-button buy" href="#">Оформить заказ</a>
     </div>
     <div class="header-middle">
-      <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-      <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-      <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      <a class="sign-in" href="#">Войти</a>>
-      <a class="sigh-up">Регистрация</a>
+      <p class="header-description">Интернет-магазин строительных материалов<br>и инструментов для ремонта</p>
+      <div>
+        <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      </div>
+      <div class="header-middle-buttons">
+        <a class="button" href="#"><span class="header-icon sign-in"></span>Войти</a>
+        <a class="button" href="#">Регистрация</a>
+      </div>
     </div>
     <nav class="header-bottom">
       <ul class="main-menu">
