@@ -6,6 +6,10 @@ body {
     color: black; 
 }
 
+.visually-hidden {
+    font-size: 0;
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -38,7 +42,6 @@ header {
 .header-top {
     display: flex;
     background: #293449;
-    height: 42px;
 }
 
 .header-navigation-container {
@@ -121,6 +124,7 @@ header {
     background-image: url(../img/icons/search.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    opacity: 0.3;
 }
 
 /* header bookmarks button */
@@ -148,6 +152,7 @@ header {
     height: 42px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    opacity: 0.3;
 }
 
 .bookmarks {
@@ -190,10 +195,10 @@ header {
     line-height: 23px;
     color: #ee3643;
     padding-left: 53px;
-    margin-top: 0;
+    margin-top: 2px;
 }
 
-.header-phone {
+.header-phone-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,10 +206,20 @@ header {
     height: 45px;
     outline: 3px solid #fff;
     outline-offset: -3px;
+    flex-wrap: wrap;
+}
+
+.header-phone {
     font-family: 'Cuprum', sans-serif;
     font-size: 21px;
     text-decoration: none;
     color: #ee3643;
+    margin-left: -25px;
+}
+
+.phone {
+    left: -50px;
+    background-image: url(../img/icons/phone.svg);
 }
 
 .header-address {
@@ -215,7 +230,7 @@ header {
     line-height: 24px;
     text-decoration: none;
     color: #32425c;
-    margin-top: 0;
+    margin-top: 5px;
 }
 
 .header-middle-buttons {
@@ -229,60 +244,124 @@ header {
     opacity: 0.3;
 }
 
+.button > .sign-in {
+    padding-left: 5px;
+}
+
 div > .button:first-child {
     padding-left: 0;
 }
 
 /* header bottom nav menu */
 .header-bottom {
-    padding-bottom: 60px;
+    padding-top: 13px;
+    padding-bottom: 50px;
 }
 
 .main-menu {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     list-style: none;
+    width: 890px;
+    height: 55px;
+    padding: 0;
+    background: #32425c;
+    box-shadow: 0px 5px #293449;
 }
 
 .main-menu-item {
-    display: flex;
     font-family: 'Cuprum', sans-serif;
     font-size: 17px;
     line-height: 24px;
     text-decoration: none;
     color: white;
-    padding-left: 32px;
-    padding-right: 32px;
-    background: #32425c;
+}
+
+.main-menu-item:hover {
+    background: red;
+}
+
+.main-menu:first-child {
+    padding-left: 25px; 
+}
+
+.main-menu:last-child {
+    padding-right: 25px; 
 }
 
 /* promo cards */
+.category-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 16px;
+}
+
+.category-card-container-small {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+}
+
 .category-card-header {
-    position: relative;
-    left: 25px;
-    top: 26px;
     color: white;
     font-size: 24px;
+    padding-left: 23px;
 }
 
 .category-card {
     width: 300px;
     height: 123px;
     background: #ffbf47;
-}
-
-.category-card {
-    background-image: url("../img/svg/materials.svg");
+    margin-right: 20px;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-position: 210px 30px;
+    background-image: url(../img/cards/materials.svg);
 }
 
 .category-card-button {
-    position: relative;
-    left: 25px;
-    top: 22px;
-    display: inline-block;
-    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
     text-transform: uppercase;
-    color: white;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    padding: 10px;
+    width: 135px;
+    height: 38px;
+    color: white;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 23px;
+}
+
+.category-card:nth-child(2) {
+    background-color: #3bbce3;
+    background-position: 200px 30px;
+    background-image: url(../img/cards/tools.svg);
+}
+
+.category-card:nth-child(3) {
+    background-color: #dc91d8;
+    background-position: 190px 30px;
+    background-image: url(../img/cards/vehicle.svg);
+}
+
+.category-card-container-small .category-card {
+    background-color: #8ed78f;
+    background-position: 200px 30px;
+    background-image: url(../img/cards/discount.svg);
+}
+
+.category-card-container-small .category-card:last-child {
+    background-color: #ffc047;
+    margin-top: 16px;
+    background-position: 190px 30px;
+    background-image: url(../img/cards/delivery.svg);
+}
+
+/* slider */
+.slider {
+    margin-right: 20px;
+    margin-top: 20px;
 }

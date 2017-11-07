@@ -27,7 +27,8 @@
     </div>
     <div class="header-middle">
       <p class="header-description">Интернет-магазин строительных материалов<br>и инструментов для ремонта</p>
-      <div>
+      <div class="header-phone-container">
+        <span class="header-icon phone"></span>
         <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
@@ -63,42 +64,49 @@
     </nav>
   </header>
   <main>
-    <section>
+    <section class="category">
       <h2 class="visually-hidden">Продукция и услуги</h2>
-      <div class="category-card">
-        <p class="category-card-header">Материалы</p>
-        <a class="category-card-button" href="#">На любой вкус</a>
-      </div>
-      <div class="category-card">
-        <p class="category-card-header">Инструмент</p>
-        <a class="category-card-button" href="#">На все случаи</a>
-      </div>
-      <div class="category-card">
-        <p class="category-card-header">Техника</p>
-        <a class="category-card-button" href="#">Для стройки</a>
-      </div>
-      <div class="slider">
-        <input type="radio" id="btn-1" name="toggle" checked>
-        <input type="radio" id="btn-2" name="toggle">
-        <div class="slider-controls">
-          <label for="btn-1"></label>
-          <label for="btn-2"></label>
+      <div  class="category-card-container">
+        <div class="category-card">
+          <span class="category-card-icon"></span>
+          <p class="category-card-header">Материалы</p>
+          <a class="button category-card-button" href="#">На любой вкус</a>
         </div>
-        <div class="slider-inner">
-          <div class="slider-slides">
-            <img src="img/banners/banner-1.jpg" width="620" height="266" alt="Перфораторы">
-            <img src="img/banners/banner-2.jpg" width="620" height="266" alt="Дрели">
+        <div class="category-card">
+          <p class="category-card-header">Инструмент</p>
+          <a class="button category-card-button" href="#">На все случаи</a>
+        </div>
+        <div class="category-card">
+          <p class="category-card-header">Техника</p>
+          <a class="button category-card-button" href="#">Для стройки</a>
+        </div>
+        <div class="slider">
+          <!--
+          <input type="radio" id="btn-1" name="toggle" checked>
+          <input type="radio" id="btn-2" name="toggle">
+          <div class="slider-controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+          </div>
+           -->
+          <div class="slider-inner">
+            <div class="slider-slides">
+              <img src="img/banners/banner-1.jpg" width="620" height="266" alt="Перфораторы">
+              <!-- 
+              <img src="img/banners/banner-2.jpg" width="620" height="266" alt="Дрели">
+               -->
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container-category-card">
-        <div class="category-card">
-          <p class="category-card-header">Скидка 50%</p>
-          <a class="category-card-button" href="#">На 350 товаров</a>
-        </div>
-        <div class="category-card">
-          <p class="category-card-header">Доставка</p>
-          <a class="category-card-button" href="#">Бесплатно</a>
+        <div class="category-card-container-small">
+          <div class="category-card">
+            <p class="category-card-header">Скидка 50%</p>
+            <a class="button category-card-button" href="#">На 350 товаров</a>
+          </div>
+          <div class="category-card">
+            <p class="category-card-header">Доставка</p>
+            <a class="button category-card-button" href="#">Бесплатно</a>
+          </div>
         </div>
       </div>
     </section>
