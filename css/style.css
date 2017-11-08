@@ -50,16 +50,21 @@ a {
 
 .new::before {
     position: absolute;
+    content: "";
+    right: 0;
     width: 60px;
     height: 60px;
+    background: none;
     background-image: url(../img/new.png);
     background-repeat: no-repeat;
-    background-position: 10px 10px;
+    background-position: 50% 50%;
 }
 
 /* header */
 .header-top-wrap {
-    width: 100%;
+    box-sizing: content-box;
+    width: 100%;   
+    background: #293449;
 }
 
 header {
@@ -68,6 +73,7 @@ header {
 
 .header-top {
     display: flex;
+    justify-content: center;
     background: #293449;
 }
 
@@ -378,6 +384,7 @@ div > .button:first-child {
     background-position: 50% 50%;
     background-position: 210px 30px;
     background-image: url(../img/cards/materials.svg);
+    position: relative;
 }
 
 .category-card-button {
@@ -385,7 +392,7 @@ div > .button:first-child {
     line-height: 18px;
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    border-radius: 2px;
     width: 135px;
     height: 38px;
     color: white;
@@ -452,7 +459,7 @@ div > .button:first-child {
 }
 
 .popular-items-button {
-    border-radius: 4px;
+    border-radius: 2px;
     width: 238px;
     background-color: #ee3643;
     color: white;
@@ -469,6 +476,32 @@ div > .button:first-child {
 .popular-items-button:activ {
     color: white;
     background-color: #ba2732;
+}
+
+.popular-content {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.popular-items-card {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: 318px;
+    margin-right: 20px;
+    margin-top: 20px;
+    outline: 1px solid #eaeaea;
+    outline-offset: -1px;
+    position: relative;
+}
+
+.popular-items-card:nth-child(4) {
+    margin-right: 0;
+}
+
+.popular-items-card-name {
+    font-size: 18px;
+    font-weight: 700;
 }
 
 /* popular company */
@@ -489,6 +522,8 @@ div > .button:first-child {
 
 .link-popular-company:hover {
     box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5);
+    transition-property: box-shadow;
+    transition-duration: 0.3s;
 }
 
 .link-popular-company:active {
@@ -516,13 +551,22 @@ div > .button:first-child {
 .section-about {
     display: flex;
     justify-content: space-between;
-    height: 370px;
+    height: 400px;
     margin-bottom: 86px;
     margin-top: 82px;
 }
 
 .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 500px;
+}
+
+.about-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
 }
 
 .about-list {
@@ -530,6 +574,26 @@ div > .button:first-child {
     font-size: 18px;
     line-height: 20px;
     list-style: none;
+}
+
+.about-list li {
+    padding-top: 20px;
+}
+
+.popular-items-button-more {
+    padding: 0;
+    margin: 0;
+    width: 220px;
+}
+
+.popular-items-button-map {
+    padding: 0;
+    margin: 0;
+    width: 300px;
+}
+
+.map-img {
+    margin-bottom: 30px;
 }
 
 /* footer */
