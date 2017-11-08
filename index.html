@@ -11,19 +11,21 @@
 
 <body>
   <header>
-    <div class="header-top">
-      <a class="logo" href="#">ТЕХНОМАРТ</a>
-      <div class="search">
-        <input type="submit" id="submit" value="">
-        <input type="search" id="search" placeholder="Поиск">
+    <div class="header-top-wrap">
+      <div class="header-top">
+        <a class="logo" href="#">ТЕХНОМАРТ</a>
+        <div class="search">
+          <input type="submit" id="submit" value="">
+          <input type="search" id="search" placeholder="Поиск">
+        </div>
+        <a class="header-navigation-button" href="#">
+          <span class="header-icon bookmarks"></span>Закладки:<span class="bookmarks-counter">&nbsp;0</span>
+        </a>
+        <a class="header-navigation-button" href="#">
+          <span class="header-icon cart"></span>Корзина:<span class="cart-counter">&nbsp;0</span>
+        </a>
+        <a class="header-navigation-button buy" href="#">Оформить заказ</a>
       </div>
-      <a class="header-navigation-button" href="#">
-        <span class="header-icon bookmarks"></span>Закладки:<span class="bookmarks-counter">&nbsp;0</span>
-      </a>
-      <a class="header-navigation-button" href="#">
-        <span class="header-icon cart"></span>Корзина:<span class="cart-counter">&nbsp;0</span>
-      </a>
-      <a class="header-navigation-button buy" href="#">Оформить заказ</a>
     </div>
     <div class="header-middle">
       <p class="header-description">Интернет-магазин строительных материалов<br>и инструментов для ремонта</p>
@@ -40,7 +42,7 @@
     <nav class="header-bottom">
       <ul class="main-menu">
         <li>
-          <a class="main-menu-item" href="#">Главная</a>
+          <a class="main-menu-item" href="index.html">Главная</a>
         </li>
         <li>
           <a class="main-menu-item" href="#">Компания</a>
@@ -67,7 +69,7 @@
     <section class="category">
       <h2 class="visually-hidden">Продукция и услуги</h2>
       <div  class="category-card-container">
-        <div class="category-card">
+        <div class="category-card new">
           <span class="category-card-icon"></span>
           <p class="category-card-header">Материалы</p>
           <a class="button category-card-button" href="#">На любой вкус</a>
@@ -113,7 +115,7 @@
     <section class="popular-items">
       <div class="section-header">
         <h2>Популярные товары:</h2>
-        <a class="button" href="#">Все популярыне товары</a>
+        <a class="button popular-items-button" href="#">Все популярыне товары</a>
       </div>
       <div class="popular-items-card">
         <div class="popular-items-card-buttons">
@@ -154,32 +156,32 @@
     <section class="popular-items">
       <div class="section-header">
         <h2>Популярные производители</h2>
-        <a class="button" href="#">Все популярыне производители</a>
+        <a class="button popular-items-button" href="#">Все популярыне производители</a>
       </div>
       <div class="popular-company">
         <a class="link-popular-company" href="#">
-          <img src="img/popular-companys/bosch.jpg" width="220" height="145" alt="bosch">
+          <img src="img/popular-companies/bosch.jpg" width="220" height="145" alt="bosch">
         </a>
         <a class="link-popular-company" href="#">
-          <img src="img/popular-companys/makita.jpg" width="220" height="145" alt="makita">
+          <img src="img/popular-companies/makita.jpg" width="220" height="145" alt="makita">
         </a>
         <a class="link-popular-company" href="#">
-          <img src="img/popular-companys/dewalt.jpg" width="220" height="145" alt="dewalt">
+          <img src="img/popular-companies/dewalt.jpg" width="220" height="145" alt="dewalt">
         </a>
         <a class="link-popular-company" href="#">
-          <img src="img/popular-companys/inter.jpg" width="220" height="145" alt="inter">
+          <img src="img/popular-companies/inter.jpg" width="220" height="145" alt="inter">
         </a>
         <a class="link-popular-company" href="#">
-          <img src="img/popular-companys/hitachi.jpg" width="220" height="145" alt="hitachi">
+          <img src="img/popular-companies/hitachi.jpg" width="220" height="145" alt="hitachi">
         </a>
         <a class="link-popular-company" href="#">
-          <img src="img/popular-companys/lg.jpg" width="220" height="145" alt="lg">
+          <img src="img/popular-companies/lg.jpg" width="220" height="145" alt="lg">
         </a>
         <a class="link-popular-company" href="#">
-          <img src="img/popular-companys/aeg.jpg" width="220" height="145" alt="aeg">
+          <img src="img/popular-companies/aeg.jpg" width="220" height="145" alt="aeg">
         </a>
         <a class="link-popular-company" href="#">
-          <img src="img/popular-companys/metabo.jpg" width="220" height="145" alt="metabo">
+          <img src="img/popular-companies/metabo.jpg" width="220" height="145" alt="metabo">
         </a>
       </div>
     </section>
@@ -215,7 +217,7 @@
           <p class="container-service-description-body">
             Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
           </p>
-          <a class="button" href="#">Отправить заявку</a>
+          <a class="button popular-items-button" href="#">Отправить заявку</a>
         </div>
       </div>
     </section>
@@ -228,77 +230,81 @@
           <br>Техномарт работает со многими транспортными компаниями:</p>
         <ul class="about-list">
           <li>Деловые линии</li>
+          <li>&nbsp;</li>
           <li>Автотрейдинг</li>
+          <li>&nbsp;</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="button" href="#">Подробнее о компании</a>
+        <a class="button popular-items-button" href="#">Подробнее о компании</a>
       </div>
       <div class="about-map">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,
-          <br>заехав в наш офис:</p>>
+          <br>заехав в наш офис:</p>
         <img src="img/map.jpg" width="300" height="158" alt="Карта">
-        <a class="button" href="#">Заблудились? Напишите нам!</a>
+        <a class="button popular-items-button" href="#">Заблудились? Напишите нам!</a>
       </div>
     </section>
     <footer>
-      <a class="logo-big">ТЕХНОМАРТ</a>
-      <ul class="footer-menu">
-        <li>
-          <a class="footer-menu-item" href="">Компания</a>
-        </li>
-        <li>
-          <a class="footer-menu-item" href="">Новости</a>
-        </li>
-        <li>
-          <a class="footer-menu-item" href="">Каталог</a>
-        </li>
-        <li>
-          <a class="footer-menu-item" href="">Доставка</a>
-        </li>
-        <li>
-          <a class="footer-menu-item" href="">Контакты</a>
-        </li>
-      </ul>
-      <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        <br>+7 (812) 555-05-55</p>
-      <ul class="footer-menu-bottom">
-        <li>
-          <a class="footer-menu-bottom-item" href="">Материалы</a>
-        </li>
-        <li>
-          <a class="footer-menu-bottom-item" href="">Техника</a>
-        </li>
-        <li>
-          <a class="footer-menu-bottom-item" href="">Инструмент</a>
-        </li>
-        <li>
-          <a class="footer-menu-bottom-item" href="">Спецпредложения</a>
-        </li>
-      </ul>
-      <div class="sub-footer">
-        <p>© 2010–2017 Компания «Техномарт»
-          <br>Все права защищены</p>
-        <ul>
+      <div class="footer-content">
+        <a class="logo logo-big">ТЕХНОМАРТ</a>
+        <ul class="footer-menu">
           <li>
-            <a class="social-button" href="#">Вконтакте</a>
+            <a class="footer-menu-item" href="#">Компания</a>
           </li>
           <li>
-            <a class="social-button" href="#"></a>Фейсбук</li>
+            <a class="footer-menu-item" href="#">Новости</a>
+          </li>
           <li>
-            <a class="social-button" href="#"></a>Инстаграм</li>
+            <a class="footer-menu-item" href="catalog.html">Каталог</a>
+          </li>
+          <li>
+            <a class="footer-menu-item" href="#">Доставка</a>
+          </li>
+          <li>
+            <a class="footer-menu-item" href="#">Контакты</a>
+          </li>
         </ul>
-        <p>
-          Обратная связь:
-          <br>
-          <a class="footer-menu-bottom-item" href="#">mail@htmlacademy.ru</a>
-        </p>
-        <p>
-          Разработано &#8212;
-          <br>
-          <a class="footer-menu-bottom-item" href="#">htmlacademy.ru</a>
-        </p>
+        <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          <br>+7 (812) 555-05-55</p>
+        <ul class="footer-menu footer-menu-bottom">
+          <li>
+            <a class="footer-menu-item footer-menu-bottom-item" href="#">Материалы</a>
+          </li>
+          <li>
+            <a class="footer-menu-item footer-menu-bottom-item" href="#">Техника</a>
+          </li>
+          <li>
+            <a class="footer-menu-item footer-menu-bottom-item" href="#">Инструмент</a>
+          </li>
+          <li>
+            <a class="footer-menu-item footer-menu-bottom-item" href="#">Спецпредложения</a>
+          </li>
+        </ul>
       </div>
+        <div class="sub-footer">
+            <div class="sub-footer-content">
+            <p class="copyright">© 2010–2017 Компания «Техномарт»
+              <br>Все права защищены</p>
+            <ul class="social-links">
+              <li>
+                <a class="social-button" href="#">Вконтакте</a>
+              </li>
+              <li>
+                <a class="social-button" href="#">Фейсбук</a></li>
+              <li>
+                <a class="social-button" href="#">Инстаграм</a></li>
+            </ul>
+            <p class="footer-feedback">
+              Обратная связь:<br>
+              <a class="footer-menu-bottom-item" href="#">mail@htmlacademy.ru</a>
+            </p>
+            <p class="footer-feedback">
+              Разработано &#8212;<br>
+              <a class="footer-menu-bottom-item" href="#">htmlacademy.ru</a>
+            </p>
+          </div>
+        </div>
     </footer>
   </main>
 </body>
