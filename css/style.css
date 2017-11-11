@@ -1,4 +1,8 @@
 /* global */
+.modal {
+    display: none;
+}
+
 body {
     font-family: 'PT Sans', sans-serif;
     font-size: 13px;
@@ -160,27 +164,6 @@ header {
     background-position: 50% 50%;
     opacity: 0.3;
 }
-
-/* #submit {
-    display: none;
-}
-
-.search::before {
-    content: "";
-    width: 42px;
-    height: 42px;
-    background: none;
-    background-image: url(../img/icons/search.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    opacity: 0.3;
-}
-
-.search:hover::before {
-    opacity: 1;
-    fill: red;
-    background-color: #212a3a;
-} */
 
 /* header bookmarks button */
 .header-navigation-button {
@@ -700,7 +683,7 @@ div > .button:first-child {
 .slider-service {
     display: flex;
     margin-top: 60px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
 .service-slider-slides {
@@ -713,13 +696,14 @@ div > .button:first-child {
     width: 10px;
     height: 272px;
     background-image: url(../img/service-shadow.png);
-    top: 145px;
+    top: 140px;
     left: 230px;
 }
 
 .service-slider-inner {
     display: flex;
-    height: 200px;
+    height: 280px;
+    width: 700px;
     overflow: hidden;
 }
 
@@ -739,10 +723,45 @@ div > .button:first-child {
     align-items: center;
 }
 
+.service-controls label:hover {
+    background-color: #293449;
+}
+
 .container-service-description {
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 280px;
+    width: 700px;
+}
+
+.service-slider-slides .container-service-description:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 261px;
+    background-image: url(../img/lorry.png);
+    background-repeat: no-repeat;
+    background-position: 220px 20px;
+}
+
+.service-slider-slides .container-service-description:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 261px;
+    background-image: url(../img/medal.png);
+    background-repeat: no-repeat;
+    background-position: 280px 20px;
+}
+
+.service-slider-slides .container-service-description:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 261px;
+    background-image: url(../img/money.png);
+    background-repeat: no-repeat;
+    background-position: 230px 20px;
 }
 
 #service-1:checked ~ .service-controls label[for="service-1"],
@@ -757,11 +776,11 @@ div > .button:first-child {
 }
 
 #service-2:checked ~ .service-slider-inner .service-slider-slides {
-    transform: translateY(-200px);
+    transform: translateY(-280px);
 }
 
 #service-3:checked ~ .service-slider-inner .service-slider-slides {
-    transform: translateY(-400px);
+    transform: translateY(-560px);
 }
 
 .service-slider-button {
@@ -979,4 +998,76 @@ footer {
 
 .social-button:hover {
     background-color: #ee3643;
+}
+
+/* catalog */
+.section-header-catalog {
+    background-color: #f2f6f8;
+}
+
+.catalog-content-container {
+    display: flex;
+}
+
+.left {
+    width: 220px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+/* seo-perforators */
+.seo-perforators {
+    background-color: #f2f6f8;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.seo-perforators h2 {
+    color: black;
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: black;
+    background: white;
+    margin-right: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+.pagination-button-next {
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.pagination-button-selected {
+    color: white;
+    background: #ee3643;
+    border: 1px solid #ee3643;
+}
+
+.pagination-button:not(.pagination-button-selected):hover {
+    border: 1px solid #bdc6ca;
+}
+
+.pagination-button:active {
+    border: 1px solid #ee3643;
 }
