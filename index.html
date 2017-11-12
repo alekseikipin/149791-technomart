@@ -14,10 +14,11 @@
     <div class="header-top-wrap">
       <div class="header-top wrapper">
         <a class="logo" href="#">ТЕХНОМАРТ</a>
-        <div class="search">
-          <input type="submit" id="submit" value="">
+        <form class="search">
+          <label for="search" class="visually-hidden">Поиск по сайту</label>
           <input type="search" id="search" placeholder="Поиск">
-        </div>
+          <input type="submit" id="submit" value="">
+        </form>
         <a class="header-navigation-button" href="#">
           <span class="header-icon bookmarks"></span>Закладки:
           <span class="bookmarks-counter">&nbsp;0</span>
@@ -38,7 +39,7 @@
         <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
       <div class="header-middle-buttons">
-        <a class="button" href="#">
+        <a class="sign-in-button button" href="#">
           <span class="header-icon sign-in"></span>Войти</a>
         <a class="button" href="#">Регистрация</a>
       </div>
@@ -120,7 +121,7 @@
     <section class="popular-items">
       <div class="section-header">
         <h2>Популярные товары:</h2>
-        <a class="button popular-items-button" href="#">Все популярыне товары</a>
+        <a class="button popular-items-button" href="#">Все популярные товары</a>
       </div>
       <div class="popular-content">
         <div class="popular-items-card">
@@ -130,7 +131,7 @@
             <a class="popular-items-button-bookmarks" href="#">В закладки</a>
           </div> -->
           <img src="img/tools/tool-1.jpg" width="220" height="160" alt="Перфоратор BOSCH BFG 9000">
-          <p class="popular-items-card-name">Перфоратор BOSCH BFG 9000</p>
+          <a class="popular-items-card-name" href="#">Перфоратор BOSCH BFG 9000</a>
           <p class="popular-items-old-price">32500 Р.</p>
           <a class="popular-items-new-price button" href="#">25500 Р.</a>
         </div>
@@ -169,7 +170,7 @@
     <section class="popular-items">
       <div class="section-header">
         <h2>Популярные производители</h2>
-        <a class="button popular-items-button" href="#">Все популярыне производители</a>
+        <a class="button popular-items-button" href="#">Все популярные производители</a>
       </div>
       <div class="popular-company">
         <a class="link-popular-company" href="#">
@@ -340,7 +341,7 @@
   </footer>
   <section class="modal modal-write-us">
     <div class="modal-write-us-top"></div>
-    <button class="modal-close">X</button>
+    <button class="modal-close" type="button">Закрыть</button>
       <div class="modal-write-us-form">
       <label for="name">Ваше имя</label>
         <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
@@ -354,7 +355,7 @@
       </div>
   </section>
   <section class="modal modal-map">
-      <button class="modal-close">X</button>
+      <button class="modal-close" type="button">Закрыть</button>
       <span class="map">
   </section>
 </body>

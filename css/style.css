@@ -15,6 +15,13 @@ body {
     font-size: 0;
 }
 
+.visually-hidden-button {
+    position: absolute;
+    background: transparent;
+    border: none;
+    font-size: 0;
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -165,6 +172,11 @@ header {
     opacity: 0.3;
 }
 
+#search:focus ~ #submit {
+    opacity: 1;
+    background-image: url(../img/icons/search-active.svg);
+}
+
 /* header bookmarks button */
 .header-navigation-button {
     display: flex;
@@ -257,6 +269,7 @@ header {
 .phone {
     left: -50px;
     background-image: url(../img/icons/phone.svg);
+    opacity: 1;
 }
 
 .header-address {
@@ -277,7 +290,12 @@ header {
     width: 45px;
     height: 45px;
     background-image: url(../img/icons/login.svg);
-    opacity: 0.3;
+    opacity: 1;
+}
+
+.sign-in-button:hover ~ .sign-in {
+    background-image: url(../img/icons/login-hover.svg);
+    background: black;
 }
 
 .button > .sign-in {
@@ -574,6 +592,7 @@ div > .button:first-child {
 .popular-items-card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 220px;
     height: 318px;
     margin-right: 20px;
@@ -592,6 +611,7 @@ div > .button:first-child {
     font-weight: 700;
     text-align: center;
     margin: 0;
+    color: black;
 }
 
 .popular-items-old-price {
@@ -602,6 +622,48 @@ div > .button:first-child {
     text-decoration: line-through;
 }
 
+.popular-items-new-price {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 120px;
+    height: 38px;
+    position: relative;
+    text-decoration: none;
+    line-height: 36px;
+    color: black;
+    background-color: #ee3643;
+    border-radius: 4px 0 0 4px;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17px;
+}
+
+.popular-items-new-price:hover {
+    color: white;
+}
+
+.popular-items-new-price:after {
+    content: "";
+    position: absolute;
+    top: -1;
+    right: -19px;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    background-color: #ee3643;
+    transform: rotate(-45deg) scale(0.73);
+}
+
+/* popular-items hover effects */
+
+.popular-items-card:hover {
+    box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5);
+    outline: none;
+    transition-property: box-shadow outline;
+    transition-duration: 0.3s;
+}
+ 
 /* popular company */
 .popular-company {
     display: flex;
@@ -652,14 +714,6 @@ div > .button:first-child {
     display: flex;
 
 }
-
-/* .container-service-description:before {
-    display: flex;
-    width: 468px;
-    height: 261px;
-    background-image: url(../img/lorry.png);
-    background-repeat: no-repeat;
-} */
 
 /* service slaider */
 .container-service-description-header {
@@ -1058,16 +1112,17 @@ footer {
     padding-right: 50px;
 }
 
-.pagination-button-selected {
-    color: white;
-    background: #ee3643;
-    border: 1px solid #ee3643;
-}
-
-.pagination-button:not(.pagination-button-selected):hover {
+.pagination-button:hover {
     border: 1px solid #bdc6ca;
 }
 
 .pagination-button:active {
+    border: 1px solid #ee3643;
+}
+
+.pagination-button-selected,
+.pagination-button-selected:hover {
+    color: white;
+    background: #ee3643;
     border: 1px solid #ee3643;
 }
