@@ -63,7 +63,6 @@ a {
     right: 0;
     width: 60px;
     height: 60px;
-    background: none;
     background-image: url(../img/new.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -286,16 +285,19 @@ header {
     display: flex;
 }
 
-.sign-in {
-    width: 45px;
-    height: 45px;
-    background-image: url(../img/icons/login.svg);
-    opacity: 1;
+.sign-in-svg {
+    fill: #c5c5c5;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.sign-in-button:hover ~ .sign-in {
+.sign-in-button:focus ~ .sign-in {
     background-image: url(../img/icons/login-hover.svg);
     background: black;
+}
+
+.sign-in-button:hover .sign-in-svg {
+    fill: #32425c;
 }
 
 .button > .sign-in {
@@ -447,6 +449,150 @@ div > .button:first-child {
     background-image: url(../img/cards/delivery.svg);
 }
 
+/* popular items */
+.popular-items {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f5f0;
+    width: 886px;
+    height: 89px;
+    align-items: center;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-top: 20px;
+}
+
+.section-header-first {
+    margin-top: 58px;
+}
+
+.popular-items-button {
+    border-radius: 2px;
+    width: 238px;
+    height: 38px;
+    background-color: #ee3643;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.popular-items-button:hover {
+    color: white;
+    background-color: #ca2c37;
+}
+
+.popular-items-button:activ {
+    color: white;
+    background-color: #ba2732;
+}
+
+.popular-items-button-bookmarks {
+    outline: 3px solid #63a63e;
+    outline-offset: -3px;
+    color: #32425c;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 135px;
+    height: 38px;
+    padding: 0;
+}
+
+.popular-items-button-bookmarks:hover {
+    outline: 3px solid #32425c;
+    outline-offset: -3px;
+    color: #32425c;
+}
+
+.popular-items-button-bookmarks:active {
+    outline: 3px solid #c1c6ce;
+    outline-offset: -3px;
+    color: #c1c6ce;
+}
+
+.popular-content {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.popular-items-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    height: 318px;
+    margin-right: 20px;
+    margin-top: 20px;
+    outline: 1px solid #eaeaea;
+    outline-offset: -1px;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.popular-items-card:nth-child(4) {
+    margin-right: 0;
+}
+
+.popular-items-card-name {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: black;
+}
+
+.popular-items-old-price {
+    text-align: center;
+    color: #a9a9a9;
+    font-size: 17px;
+    line-height: 18px;
+    text-decoration: line-through;
+}
+
+.popular-items-new-price {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 120px;
+    height: 38px;
+    position: relative;
+    text-decoration: none;
+    line-height: 36px;
+    color: black;
+    background-color: #ee3643;
+    border-radius: 4px 0 0 4px;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17px;
+}
+
+.popular-items-new-price:hover {
+    color: white;
+}
+
+.popular-items-new-price:after {
+    content: "";
+    position: absolute;
+    top: -1;
+    right: -19px;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    background-color: #ee3643;
+    transform: rotate(-45deg) scale(0.73);
+}
+
+.popular-items-old-price-none {
+    color: white;
+}
+
 /* slider */
 .slider-button {
     position: absolute;
@@ -454,8 +600,10 @@ div > .button:first-child {
     margin: 0;
     padding: 0;
     width: 195px;
+    height: 38px;
     left: 25px;
     bottom: 25px;
+    padding: 0;
 }
 
 .slider {
@@ -488,8 +636,8 @@ div > .button:first-child {
     margin-bottom: 10px;
     text-align: center;
     z-index: 10;
-    left: 50%;
-    top: 90%;
+    left: 47%;
+    top: 80%;
 }
 
 .slider-controls label {
@@ -546,162 +694,72 @@ div > .button:first-child {
     background-position: 50% 50%;
 }
 
-/* popular items */
-.popular-items {
-    width: 940px;
-    margin: 0 auto;
-}
-
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f9f5f0;
-    width: 886px;
-    height: 89px;
-    align-items: center;
-    padding-left: 28px;
-    padding-right: 28px;
-    margin-top: 53px;
-}
-
-.popular-items-button {
-    border-radius: 2px;
-    width: 238px;
-    background-color: #ee3643;
-    color: white;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-.popular-items-button:hover {
-    color: white;
-    background-color: #ca2c37;
-}
-
-.popular-items-button:activ {
-    color: white;
-    background-color: #ba2732;
-}
-
-.popular-content {
-    display: flex;
-    margin-bottom: 0;
-}
-
-.popular-items-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 220px;
-    height: 318px;
-    margin-right: 20px;
-    margin-top: 20px;
-    outline: 1px solid #eaeaea;
-    outline-offset: -1px;
-    position: relative;
-}
-
-.popular-items-card:nth-child(4) {
-    margin-right: 0;
-}
-
-.popular-items-card-name {
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    color: black;
-}
-
-.popular-items-old-price {
-    text-align: center;
-    color: #a9a9a9;
-    font-size: 17px;
-    line-height: 18px;
-    text-decoration: line-through;
-}
-
-.popular-items-new-price {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 120px;
-    height: 38px;
-    position: relative;
-    text-decoration: none;
-    line-height: 36px;
-    color: black;
-    background-color: #ee3643;
-    border-radius: 4px 0 0 4px;
-    color: white;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 17px;
-}
-
-.popular-items-new-price:hover {
-    color: white;
-}
-
-.popular-items-new-price:after {
-    content: "";
-    position: absolute;
-    top: -1;
-    right: -19px;
-    z-index: 1;
-    width: 36px;
-    height: 36px;
-    background-color: #ee3643;
-    transform: rotate(-45deg) scale(0.73);
-}
-
 /* popular-items hover effects */
-
 .popular-items-card:hover {
     box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5);
     outline: none;
     transition-property: box-shadow;
     transition-duration: 0.3s;
 }
- 
-.popular-items-card {
-    position: relative;
-    width: 220px;
-    height: 318px;
-    background-color: #ffffff;
-    overflow: hidden;
-}
-
-.popular-items-card .details {
-    display: none;
-    width: 220px;
-    height: 318px;
-    padding-top: 60px;
-    color: #ffffff;
-    background-color: rgba(75, 90, 120, 0.9);
-}
-
-.popular-items-card:hover .details {
-    display: block;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 310px;
-    height: 310px;
-    font-size: 0;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    outline: 0;
-    transition: transform 0.6s ease-out;
-    transform: scale(1);
-}
 
 .popular-items-card:hover ~ .popular-items-card-img {
-    background: black;
+    display: none;
+}
+
+.popular-items-button-buy {
+    position: relative;
+    padding: 0;
+    width: 135px;
+    height: 35px;
+    background-color: #63a63e;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 0px 3px 0px #367315;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.popular-items-button-buy svg {
+    opacity: 0.3;
+    position: absolute;
+    left: 11px;
+}
+
+.popular-items-button-buy:hover {
+    background-color: #5fbb2d;
+    color: white;
+}
+
+.popular-items-button-buy:active {
+    background-color: #367315;
+    color: white;
+}
+
+.popular-items-button-buy:hover svg {
+    opacity: 1;
+}
+
+.popular-items-button-buy:active svg {
+    opacity: 1;
+}
+
+.card-description-hidden {
+    display: none;
+}
+
+.popular-items-card:hover .card-img-hidden {
+    display: none;
+}
+
+.popular-items-card:hover .card-description-hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    width: 220px;
+    height: 96px;
 }
 
 /* popular company */
