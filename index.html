@@ -18,8 +18,8 @@
         <form class="search">
           <label for="search" class="visually-hidden">Поиск по сайту</label>
           <input type="search" id="search" placeholder="Поиск">
-          <input type="submit" id="submit" value="">
-        </form>
+          <input type="submit" id="submit" value="" tabindex="-1">
+        </form> 
         <a class="header-navigation-button" href="#">
           <span class="header-icon bookmarks"></span>Закладки:
           <span class="bookmarks-counter">&nbsp;0</span>
@@ -41,7 +41,7 @@
       </div>
       <div class="header-middle-buttons">
         <a class="sign-in-button button" href="#">
-          <svg class="sign-in-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          <svg class="sign-in-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
             <g>
               <polygon points="14.875,8.5 6,0 6,6 0,6 0,11 6,11 6,17 	" />
@@ -96,7 +96,7 @@
           <a class="button category-card-button" href="#">Для стройки</a>
         </div>
         <div class="slider">
-          <a class="button popular-items-button slider-button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+          <a class="popular-items-button slider-button button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
           <input type="radio" id="btn-1" name="toggle" checked>
           <input type="radio" id="btn-2" name="toggle">
           <div class="slider-controls">
@@ -135,7 +135,7 @@
         <div class="popular-items-card">
           <div class="popular-items-card-buttons card-description-hidden">
             <a class="button popular-items-button-buy" href="#">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
                 <g fill="#ffffff">
                   <circle cx="4.5" cy="13.5" r="1.5" />
@@ -154,7 +154,7 @@
         <div class="popular-items-card">
           <div class="popular-items-card-buttons card-description-hidden">
             <a class="button popular-items-button-buy" href="#">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
                 <g fill="#ffffff">
                   <circle cx="4.5" cy="13.5" r="1.5" />
@@ -173,7 +173,7 @@
         <div class="popular-items-card">
           <div class="popular-items-card-buttons card-description-hidden">
             <a class="button popular-items-button-buy" href="#">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
                 <g fill="#ffffff">
                   <circle cx="4.5" cy="13.5" r="1.5" />
@@ -192,7 +192,7 @@
         <div class="popular-items-card new">
           <div class="popular-items-card-buttons card-description-hidden">
             <a class="button popular-items-button-buy" href="#">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
                 <g fill="#ffffff">
                   <circle cx="4.5" cy="13.5" r="1.5" />
@@ -313,7 +313,7 @@
         <p class="delivery-info">Вы можете забрать товар сами,
           <br>заехав в наш офис:</p>
         <img class="map-img" src="img/map.jpg" width="300" height="158" alt="Карта">
-        <a class="button popular-items-button popular-items-button-map" href="#">Заблудились? Напишите нам!</a>
+        <a id="writeUs" class="button popular-items-button popular-items-button-map">Заблудились? Напишите нам!</a>
       </div>
     </section>
   </main>
@@ -382,25 +382,38 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal-write-us">
-    <div class="modal-write-us-top"></div>
-    <button class="modal-close" type="button">Закрыть</button>
-    <div class="modal-write-us-form">
-      <label for="name">Ваше имя</label>
-      <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
-      <label for="e-mail">Ваше e-mail</label>
-      <input type="email" name="e-mail" placeholder="Для отправки ответа">
-      <label for="note">Текст письма</label>
-      <input type="text" name="note" placeholder="Для отправки ответа">
-    </div>
-    <div class="modal-write-us-bottom">
-      <a class="button popular-items-button">Отправить</a>
+  <section id="writeUsModal" class="modal modal-write-us">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <div class="modal-wrapper">
+      <div class="modal-write-us-top"></div>
+      <button class="close modal-close" type="button">Закрыть</button>
+      <div class="modal-write-us-form">
+        <div class="modal-top-form">
+          <p>
+            <label for="name">Ваше имя:</label>
+            <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
+          </p>
+          <p>
+            <label for="e-mail">Ваше e-mail:</label>
+            <input type="email" name="e-mail" id="e-mail" placeholder="Для отправки ответа">
+          </p>
+        </div>
+        <div class="note-wrap">
+          <label for="note">Текст письма:</label>
+          <textarea name="note" id="note" placeholder="В свободной форме"></textarea>
+        </div>
+      </div>
+      <div class="modal-write-us-bottom">
+        <a class="close button popular-items-button button-write-us">Отправить</a>
+      </div>
     </div>
   </section>
   <section class="modal modal-map">
+      <h2 class="visually-hidden">Карта проезда</h2>
     <button class="modal-close" type="button">Закрыть</button>
-    <span class="map">
+    <span class="map"></span>
   </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
