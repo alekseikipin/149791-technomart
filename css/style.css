@@ -233,6 +233,10 @@ header {
     background-image: url(../img/icons/cart.svg);
 }
 
+.cart-full {
+    background-color: #ee3643;
+}
+
 /* buy button */
 .buy {
     padding: 0;
@@ -584,6 +588,7 @@ div > .button:first-child {
     font-weight: 700;
     text-align: center;
     margin: 0;
+    margin-top: 18px;
     color: black;
 }
 
@@ -593,6 +598,8 @@ div > .button:first-child {
     font-size: 17px;
     line-height: 18px;
     text-decoration: line-through;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .popular-items-new-price {
@@ -633,6 +640,8 @@ div > .button:first-child {
 .popular-items-old-price-none {
     color: white;
     font-size: 17px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 /* slider */

@@ -19,7 +19,7 @@
           <label for="search" class="visually-hidden">Поиск по сайту</label>
           <input type="search" id="search" placeholder="Поиск">
           <input type="submit" id="submit" value="" tabindex="-1">
-        </form> 
+        </form>
         <a class="header-navigation-button" href="#">
           <span class="header-icon bookmarks"></span>Закладки:
           <span class="bookmarks-counter">&nbsp;0</span>
@@ -41,8 +41,8 @@
       </div>
       <div class="header-middle-buttons">
         <a class="sign-in-button button" href="#">
-          <svg class="sign-in-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
+          <svg class="sign-in-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
             <g>
               <polygon points="14.875,8.5 6,0 6,6 0,6 0,11 6,11 6,17 	" />
             </g>
@@ -135,8 +135,8 @@
         <div class="popular-items-card">
           <div class="popular-items-card-buttons card-description-hidden">
             <a class="button popular-items-button-buy" href="#">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px"
+                height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
                 <g fill="#ffffff">
                   <circle cx="4.5" cy="13.5" r="1.5" />
                   <circle cx="12.5" cy="13.5" r="1.5" />
@@ -154,8 +154,8 @@
         <div class="popular-items-card">
           <div class="popular-items-card-buttons card-description-hidden">
             <a class="button popular-items-button-buy" href="#">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px"
+                height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
                 <g fill="#ffffff">
                   <circle cx="4.5" cy="13.5" r="1.5" />
                   <circle cx="12.5" cy="13.5" r="1.5" />
@@ -173,8 +173,8 @@
         <div class="popular-items-card">
           <div class="popular-items-card-buttons card-description-hidden">
             <a class="button popular-items-button-buy" href="#">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px"
+                height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
                 <g fill="#ffffff">
                   <circle cx="4.5" cy="13.5" r="1.5" />
                   <circle cx="12.5" cy="13.5" r="1.5" />
@@ -192,8 +192,8 @@
         <div class="popular-items-card new">
           <div class="popular-items-card-buttons card-description-hidden">
             <a class="button popular-items-button-buy" href="#">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="15px" height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px"
+                height="15px" viewBox="0 0 15 15" enable-background="new 0 0 15 15" xml:space="preserve">
                 <g fill="#ffffff">
                   <circle cx="4.5" cy="13.5" r="1.5" />
                   <circle cx="12.5" cy="13.5" r="1.5" />
@@ -213,7 +213,7 @@
     <section class="popular-items">
       <div class="section-header">
         <h2>Популярные производители</h2>
-        <a class="button popular-items-button" href="#">Все популярные производители</a>
+        <a class="button popular-items-button" href="#">Все производители</a>
       </div>
       <div class="popular-company">
         <a class="link-popular-company" href="#">
@@ -312,7 +312,9 @@
         <h2>Контакты</h2>
         <p class="delivery-info">Вы можете забрать товар сами,
           <br>заехав в наш офис:</p>
-        <img class="map-img" src="img/map.jpg" width="300" height="158" alt="Карта">
+        <a id="map">
+          <img class="map-img" src="img/map.jpg" width="300" height="158" alt="Карта">
+        </a>
         <a id="writeUs" class="button popular-items-button popular-items-button-map">Заблудились? Напишите нам!</a>
       </div>
     </section>
@@ -404,13 +406,13 @@
         </div>
       </div>
       <div class="modal-write-us-bottom">
-        <a class="close button popular-items-button button-write-us">Отправить</a>
+        <a class="button popular-items-button button-write-us">Отправить</a>
       </div>
     </div>
   </section>
-  <section class="modal modal-map">
-      <h2 class="visually-hidden">Карта проезда</h2>
-    <button class="modal-close" type="button">Закрыть</button>
+  <section id="mapImg" class="modal modal-map">
+    <h2 class="visually-hidden">Карта проезда</h2>
+    <button class="close modal-close" type="button">Закрыть</button>
     <span class="map"></span>
   </section>
   <script src="js/script.js"></script>
