@@ -1405,11 +1405,20 @@ form {
     display: flex;
     font-size: 15px;
     text-transform: uppercase;
-    border: none;
     margin-top: 21px;
 }
 
-.manufacturers > legend {
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+fieldset:not(:nth-child(4)) {
+    border-bottom: solid 1px #c6c6c6;
+}
+
+legend {
     font-size: 17px;
     font-weight: 700;
 }
@@ -1427,9 +1436,20 @@ form {
     border-radius: 2px;
 }
 
-fieldset {
-    padding: 0;
-    margin: 0;
+.numbers {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=number] {
+    display: flex;
+    border: none;
+    width: 95px;
+    height: 38px;
+    background-color: #f7f3ec;
+    border-radius: 2px;
+    margin-top: 9px;
+    margin-bottom: 25px;
 }
 
 .manufacturers > p {
@@ -1445,6 +1465,24 @@ fieldset {
 .manufacturers input[type=checkbox]:checked + label {
     background-image: url("../img/icons/checkbox-on.svg");
 } 
+
+.type::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 9px;
+    height: 9px;
+    background: white;
+    border: solid 5px white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 4px #c6c6c6;
+    margin-right: 10px;
+    top: 2px;
+}
+
+.drill-type input[type=radio]:checked ~ .type::before {
+    background: #c6c6c6;
+}
 
 /* seo-perforators */
 .seo-perforators {

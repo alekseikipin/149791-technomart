@@ -107,9 +107,11 @@
                 <fieldset class="filter price">
                     <legend>Цена:</legend>
                     <div class="range"></div>
-                    <input type="number" placeholder="0">
-                    <p>-</p>
-                    <input type="number" placeholder="30000">
+                    <div class="numbers">
+                        <input type="number" placeholder="0">
+                        <p>-</p>
+                        <input type="number" placeholder="30000">
+                    </div>
                 </fieldset>
                 <fieldset class="filter manufacturers">
                     <legend>Производители:</legend>
@@ -134,15 +136,15 @@
                         <label for="hitachi">Hitachi</label>
                     </p>
                 </fieldset>
-                <fieldset class="filter supply">
+                <fieldset class="filter drill-type">
                     <legend>Питание:</legend>
                     <p>
-                        <input type="radio" id="battery" name="supply" checked>
-                        <label for="battery">Аккумулятор</label>
+                        <input class="visually-hidden" type="radio" id="battery" name="supply" checked>
+                        <label class="type" for="battery">Аккумулятор</label>
                     </p>
                     <p>
-                        <input type="radio" id="socket" name="supply">
-                        <label for="socket">Сетевые</label>
+                        <input class="visually-hidden" type="radio" id="socket" name="supply">
+                        <label class="type" for="socket">Сетевые</label>
                     </p>
                 </fieldset>
                 <button class="button button-filter">Показать</button>
