@@ -56,10 +56,6 @@ textarea {
     line-height: 24px;
 }
 
-/* .button:active {
-    color: rgba(0, 0, 0, 0.3);
-} */
-
 h2 {
     font-family: 'Cuprum', sans-serif;
     font-size: 30px;
@@ -181,23 +177,21 @@ header {
     background: white;
 }
 
-/* header search button */
 #submit {
     border: none;
     position: absolute;
+    top: 12px;
+    left: 8px;
     width: 46px;
     height: 42px;
     background: none;
-    background-image: url(../img/icons/search.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    fill: white;
     opacity: 0.3;
-    
 }
 
 #search:focus ~ #submit {
     opacity: 1;
-    background-image: url(../img/icons/search-active.svg);
+    fill: #ee3643;
 }
 
 /* header bookmarks button */
@@ -348,6 +342,21 @@ header {
 
 div > .button:first-child {
     padding-left: 0;
+}
+
+.logout-button {
+    padding: 0;
+}
+
+.user {
+    fill: #c5c5c5;
+    padding: 13px;
+}
+
+.logout {
+    fill: #c5c5c5;
+    padding: 13px;
+    padding-right: 10px;
 }
 
 /* header bottom nav menu */
@@ -939,9 +948,9 @@ div > .button:first-child {
     overflow: hidden;
 }
 
-.slider-service input[type=radio] {
+/* .slider-service input[type=radio] {
     display: none;
-}
+} */
 
 .service-controls {
     margin-top: 10px;
@@ -1000,7 +1009,14 @@ div > .button:first-child {
 #service-2:checked ~ .service-controls label[for="service-2"],
 #service-3:checked ~ .service-controls label[for="service-3"] {
     background-color: white;
-    color: #32425c;
+    color: #293449;
+}
+
+#service-1:focus ~ .service-controls label[for="service-1"],
+#service-2:focus ~ .service-controls label[for="service-2"],
+#service-3:focus ~ .service-controls label[for="service-3"] {
+    border-left: solid 5px #ee3643;
+    margin-left: -5px;
 }
 
 #service-1:checked ~ .service-slider-inner .service-slider-slides .container-service-description:nth-child(1) {
@@ -1354,6 +1370,7 @@ footer {
 
 .sort-activ {
     fill: red;
+    text-decoration: none;
 }
 
 .sort-by:hover {
