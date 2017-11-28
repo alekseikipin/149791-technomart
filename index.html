@@ -316,7 +316,7 @@
         <h2>Контакты</h2>
         <p class="delivery-info">Вы можете забрать товар сами,
           <br>заехав в наш офис:</p>
-        <a id="map" href="maps.google.com">
+        <a id="mapLink" href="#">
           <img class="map-img" src="img/map.jpg" width="300" height="158" alt="Карта">
         </a>
         <a id="writeUs" class="button popular-items-button popular-items-button-map" href="write.html">Заблудились? Напишите нам!</a>
@@ -414,12 +414,28 @@
       </div>
     </div>
   </section>
-  <section id="mapImg" class="modal modal-map">
+  <section id="map" class="modal">
     <h2 class="visually-hidden">Карта проезда</h2>
     <button class="close modal-close" type="button">Закрыть</button>
-    <span class="map"></span>
+    <script>
+        function initMap() {
+          var saintP = {lat: 59.9343, lng: 30.3351};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: saintP
+          });
+          var marker = new google.maps.Marker({
+            position: saintP,
+            map: map
+          });
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFUnFdwDZaqcd_G93oOspNumrF1ERsCaw&callback=initMap"
+      type="text/javascript"></script>
   </section>
   <script src="js/script.js"></script>
+  <script src="js/script-map.js"></script>
+  
 </body>
 
 </html>
