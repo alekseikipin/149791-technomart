@@ -298,8 +298,6 @@ header {
 }
 
 .header-address {
-    display: flex;
-    justify-content: center;
     font-family: 'Cuprum', sans-serif;
     font-size: 14px;
     line-height: 24px;
@@ -345,7 +343,15 @@ div > .button:first-child {
 }
 
 .logout-button {
+    display: flex;
+    justify-content: space-between;
+    width: 299px;
     padding: 0;
+    margin: 0;
+}
+
+.logout-button:hover {
+    color: black;
 }
 
 .user {
@@ -353,10 +359,48 @@ div > .button:first-child {
     padding: 13px;
 }
 
+.user:hover {
+    fill: #32425c;
+}
+
 .logout {
     fill: #c5c5c5;
     padding: 13px;
     padding-right: 10px;
+}
+
+.logout:hover {
+    fill: #32425c;
+}
+
+.user-name {
+    position: relative;
+    left: -11px;
+}
+
+.header-middle-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.orders {
+    display: flex;
+}
+
+.header-orders {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #32425c;
+    margin-top: 3px;
+    text-decoration: underline;
+    padding-left: 18px;
+}
+
+.header-orders-bull {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
 }
 
 /* header bottom nav menu */
