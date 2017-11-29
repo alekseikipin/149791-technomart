@@ -18,7 +18,7 @@
         <form class="search" action="http://echo.htmlacademy.ru">
           <label for="search" class="visually-hidden">Поиск по сайту</label>
           <input type="search" id="search" placeholder="Поиск" required>
-          <button type="submit" id="submit" value="" tabindex="-1"><svg width="46px" height="42px">
+          <button type="submit" id="submit" value=""><svg width="17" height="17">
            <path d="M17,15.586l-3.542-3.542C14.421,10.782,15,9.21,15,7.5C15,3.358,11.643,0,7.5,0C3.358,0,0,3.358,0,7.5
              C0,11.643,3.358,15,7.5,15c1.71,0,3.282-0.579,4.544-1.542L15.586,17L17,15.586z M2,7.5C2,4.467,4.467,2,7.5,2
              C10.532,2,13,4.467,13,7.5c0,3.032-2.468,5.5-5.5,5.5C4.467,13,2,10.532,2,7.5z"/>
@@ -416,26 +416,11 @@
   </section>
   <section id="map" class="modal">
     <h2 class="visually-hidden">Карта проезда</h2>
-    <button class="close modal-close" type="button">Закрыть</button>
-    <script>
-        function initMap() {
-          var saintP = {lat: 59.9343, lng: 30.3351};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: saintP
-          });
-          var marker = new google.maps.Marker({
-            position: saintP,
-            map: map
-          });
-        }
-      </script>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59910436516!2d30.32089461633732!3d59.93879418187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+Street%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2ssg!4v1511961614813" width="620" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFUnFdwDZaqcd_G93oOspNumrF1ERsCaw&callback=initMap"
       type="text/javascript"></script>
   </section>
   <script src="js/script.js"></script>
-  <script src="js/script-map.js"></script>
-  
 </body>
 
 </html>
