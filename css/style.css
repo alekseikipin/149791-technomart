@@ -1540,8 +1540,6 @@ footer {
 
 /* form */
 form {
-    display: flex;
-    flex-direction: column;
     width: 220px;
 }
 .left {
@@ -1560,7 +1558,6 @@ form {
 }
 
 .filter {
-    display: flex;
     font-size: 15px;
     text-transform: uppercase;
     margin-top: 21px;
