@@ -7,10 +7,6 @@ body {
     min-width: 940px;
 }
 
-textarea {
-    resize: none;
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -84,7 +80,7 @@ a {
     margin: 0 auto;
 }
 
-.seo-perforators     p {
+.seo-perforators p {
     line-height: 24px;
 }
 
@@ -143,7 +139,7 @@ header {
     position: relative;
 }
 
-#search {
+.search-input {
     width: 270px;
     height: 42px;
     background: #293449;
@@ -155,29 +151,29 @@ header {
     border-radius: 0;
 }
 
-#search::-webkit-input-placeholder {
+.search-input::-webkit-input-placeholder {
     font-family: 'Cuprum', sans-serif;
     color: white;
 }
 
-#search:hover,
-#search:focus {
+.search-input:hover,
+.search-input:focus {
     background: #212a3a;
     outline: none;
 }
 
-#search:focus::-webkit-input-placeholder {
+.search-input:focus::-webkit-input-placeholder {
     font-family: 'Cuprum', sans-serif;
     color: rgba(0, 0, 0, 0.3);
 }
 
-#search:focus {
+.search-input:focus {
     font-family: 'Cuprum', sans-serif;
     color: black;
     background: white;
 }
 
-#submit {
+.submit {
     border: none;
     position: absolute;
     width: 46px;
@@ -187,12 +183,12 @@ header {
     opacity: 0.3;
 }
 
-#submit svg {
+.submit svg {
     position: relative;
     top: 2px;
 }
 
-#search:focus ~ #submit {
+.search-input:focus ~ #submit {
     opacity: 1;
     fill: #ee3643;
 }
@@ -698,7 +694,7 @@ div > .button:first-child {
     line-height: 18px;
     text-decoration: line-through;
     margin-top: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
 
 .popular-items-new-price {
@@ -737,10 +733,13 @@ div > .button:first-child {
 }
 
 .popular-items-old-price-none {
+    text-align: center;
     color: white;
     font-size: 17px;
+    line-height: 18px;
+    text-decoration: line-through;
     margin-top: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
 
 /* slider */
@@ -795,6 +794,7 @@ div > .button:first-child {
 
 .slider-controls label {
     display: inline-block;
+    vertical-align: top;
     width: 6px;
     height: 6px;
     margin: 0 3px;
@@ -806,16 +806,16 @@ div > .button:first-child {
 }
 
 
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+.btn-1:checked ~ .slider-controls label[for="btn-1"],
+.btn-2:checked ~ .slider-controls label[for="btn-2"] {
     background-color: #ee3643;
 }
 
-#btn-1:checked ~ .slider-inner .slider-slides {
+.btn-1:checked ~ .slider-inner .slider-slides {
     transform: translate(0);
 }
 
-#btn-2:checked ~ .slider-inner .slider-slides {
+.btn-2:checked ~ .slider-inner .slider-slides {
     transform: translate(-620px);
 }
 
@@ -1087,33 +1087,33 @@ div > .button:first-child {
     background-position: 230px 20px;
 }
 
-#service-1:checked ~ .service-controls label[for="service-1"],
-#service-2:checked ~ .service-controls label[for="service-2"],
-#service-3:checked ~ .service-controls label[for="service-3"] {
+.service-1:checked ~ .service-controls label[for="service-1"],
+.service-2:checked ~ .service-controls label[for="service-2"],
+.service-3:checked ~ .service-controls label[for="service-3"] {
     background-color: white;
     color: #293449;
 }
 
-#service-1:focus ~ .service-controls label[for="service-1"],
-#service-2:focus ~ .service-controls label[for="service-2"],
-#service-3:focus ~ .service-controls label[for="service-3"] {
+.service-1:focus ~ .service-controls label[for="service-1"],
+.service-2:focus ~ .service-controls label[for="service-2"],
+.service-3:focus ~ .service-controls label[for="service-3"] {
     border-left: solid 5px #ee3643;
     margin-left: -5px;
 }
 
-#service-1:checked ~ .service-slider-inner .service-slider-slides .container-service-description:nth-child(1) {
+.service-1:checked ~ .service-slider-inner .service-slider-slides .container-service-description:nth-child(1) {
     visibility: visible; 
     height: auto;
     min-height: 280px;
 }
 
-#service-2:checked ~ .service-slider-inner .service-slider-slides .container-service-description:nth-child(2) {
+.service-2:checked ~ .service-slider-inner .service-slider-slides .container-service-description:nth-child(2) {
     visibility: visible; 
     height: auto;
     min-height: 280px;
 }
 
-#service-3:checked ~ .service-slider-inner .service-slider-slides .container-service-description:nth-child(3) {
+.service-3:checked ~ .service-slider-inner .service-slider-slides .container-service-description:nth-child(3) {
     visibility: visible; 
     height: auto;
     min-height: 280px;
@@ -1394,7 +1394,7 @@ footer {
 .range-control-2 {
     display: flex;
     position: relative;
-    left: 100px;
+    left: 120px;
     width: 4px;
     height: 4px;
     background-color: #ababab;
@@ -1433,6 +1433,7 @@ footer {
 .breadcrumbs > li:not(:first-child)::before {
     content: "";
     display: inline-block;
+    vertical-align: top;
     background-image: url("../img/icons/right-arrow.svg");
     background-repeat: no-repeat;
     width: 8px;
@@ -1547,20 +1548,25 @@ form {
 }
 
 .button-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
     padding: 0;
     margin: 0;
-    margin-top: 65px;
+    margin-top: 70px;
     border: solid 1px #e5e5e5;
     text-transform: uppercase;
     font-size: 13px;
     width: 138px;
-    height: 36px;
+    min-height: 38px;
 }
 
 .filter {
     font-size: 15px;
     text-transform: uppercase;
-    margin-top: 21px;
+    margin-top: 16px;
 }
 
 fieldset {
@@ -1589,6 +1595,7 @@ legend {
     height: 80px;
     background-color: #f7f3ec;
     border-radius: 2px;
+    margin-top: 15px;
 }
 
 .numbers {
@@ -1610,7 +1617,7 @@ input[type=number] {
     text-align: center;
 }
 
-input[type=number]
+input[type=number] {
     font-size: 17px;
     color: black;
     text-align: center;
@@ -1640,14 +1647,24 @@ input[type=number]:focus {
     outline: none;
 }
 
+.manufacturers {
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
 .manufacturers > p {
     vertical-align: middle;
+    min-height: 25px;
 }
 
 .manufacturers input[type=checkbox] + label {
+    display: inline-block;
     background-image: url("../img/icons/checkbox.svg");
     background-repeat: no-repeat;
-    padding-left: 25px;
+    background-size: 25px 25px;
+    padding-left: 35px;
+    min-height: 25px;
+    line-height: 25px;
 } 
 
 .manufacturers input[type=checkbox]:focus + label {
@@ -1656,11 +1673,13 @@ input[type=number]:focus {
 
 .manufacturers input[type=checkbox]:checked + label {
     background-image: url("../img/icons/checkbox-on.svg");
-} 
+    background-size: 25px 25px;
+}
 
 .type::before {
     content: "";
     display: inline-block;
+    vertical-align: top;
     position: relative;
     width: 9px;
     height: 9px;
@@ -1670,6 +1689,10 @@ input[type=number]:focus {
     box-shadow: 0px 0px 0px 4px #c6c6c6;
     margin-right: 10px;
     top: 2px;
+}
+
+.drill-type {
+    margin-top: 22px;
 }
 
 .drill-type input[type=radio]:checked ~ .type::before {
@@ -1687,8 +1710,8 @@ input[type=number]:focus + label {
 /* seo-perforators */
 .seo-perforators {
     background-color: #f2f6f8;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 35px;
+    padding-bottom: 55px;
 }
 
 .seo-perforators h2 {
@@ -1766,7 +1789,6 @@ input[type=number]:focus + label {
 .modal {
     display: none;
     position: fixed;
-    z-index: 100;
     top: 50%;
     left: 50%;
     margin-top: -215px;
@@ -1821,7 +1843,7 @@ input[type=number]:focus + label {
     height: 38px;
 }
 
-#note {
+.note {
     width: 460px;
     height: 114px;
     color: #a9a9a9;
@@ -1830,9 +1852,10 @@ input[type=number]:focus + label {
     border: 1px solid #e5e5e5;
     padding-left: 17px;
     padding-top: 10px;
+    resize: none;
 }
 
-#note:focus {
+.note:focus {
     color: black;
 }
 
@@ -1870,5 +1893,3 @@ input[type=number]:focus + label {
     width: 460px;
     height: 38px;
 }
-
-/* map */
