@@ -192,7 +192,7 @@ a {
     top: 2px;
 }
 
-.search-input:focus ~ #submit {
+.search-input:focus ~ .submit {
     opacity: 1;
     fill: #ee3643;
 }
