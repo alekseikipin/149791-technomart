@@ -1,6 +1,6 @@
 /* global */
 body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', 'Arial' sans-serif;
     font-size: 13px;
     color: black; 
     margin: 0;
@@ -35,7 +35,7 @@ body {
     padding-bottom: 13px;
     padding-left: 25px;
     padding-right: 25px;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 21px;
     line-height: 18px;
     color: black;
@@ -54,7 +54,7 @@ body {
 }
 
 h2 {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 30px;
     text-transform: uppercase;
     color: #32425c;
@@ -112,7 +112,7 @@ a {
     justify-content: center;    
     width: 220px;
     height: 42px;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 24px;
     color: white;
     background-color: #ee3643;
@@ -154,7 +154,7 @@ a {
 }
 
 .search-input::-webkit-input-placeholder {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     color: white;
 }
 
@@ -165,12 +165,12 @@ a {
 }
 
 .search-input:focus::-webkit-input-placeholder {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     color: rgba(0, 0, 0, 0.3);
 }
 
 .search-input:focus {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     color: black;
     background: white;
 }
@@ -202,7 +202,7 @@ a {
     display: flex;
     width: 150px;
     height: 42px;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
     color: white;
     line-height: 42px;
@@ -267,7 +267,7 @@ a {
 
 .header-description {
     width: 200px;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 16px;
     font-style: italic;
     line-height: 23px;
@@ -288,7 +288,7 @@ a {
 }
 
 .header-phone {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 21px;
     color: #ee3643;
     margin-left: -25px;
@@ -306,7 +306,7 @@ a {
 }
 
 .header-address {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 14px;
     line-height: 24px;
     color: #32425c;
@@ -413,7 +413,7 @@ div > .button:first-child {
 }
 
 .header-orders {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: #32425c;
@@ -470,7 +470,7 @@ div > .button:first-child {
     justify-content: center;
     align-items: center;
     flex-basis: 120px;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
     line-height: 24px;
     color: white;
@@ -515,7 +515,7 @@ div > .button:first-child {
 }
 
 .category-card-header {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     color: white;
     font-size: 24px;
     padding-left: 23px;
@@ -717,7 +717,7 @@ div > .button:first-child {
     background-color: #ee3643;
     border-radius: 4px 0 0 4px;
     color: white;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 17px;
 }
 
@@ -990,7 +990,7 @@ div > .button:first-child {
 
 /* service slaider */
 .container-service-description-header {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 36px;
     padding-left: 80px;
     color: #32425c;
@@ -1048,7 +1048,7 @@ div > .button:first-child {
     padding-bottom: 18px;
     background-color: #32425c;
     color: white;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 21px;
     padding-left: 20px;
     align-items: center;
@@ -1155,7 +1155,7 @@ div > .button:first-child {
 }
 
 .about-list {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 18px;
     line-height: 20px;
     list-style: none;
@@ -1224,7 +1224,7 @@ footer {
 }
 
 .footer-address {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 18px;
     line-height: 24px;
     color: white;
@@ -1254,7 +1254,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
     line-height: 24px;
     color: white;
@@ -1301,7 +1301,7 @@ footer {
 }
 
 .copyright {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 18px;
     color: white;
@@ -1309,7 +1309,7 @@ footer {
 }
 
 .footer-feedback {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
     line-height: 24px;
     color: white;
@@ -1567,7 +1567,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     padding: 0;
     margin: 0;
@@ -1744,7 +1744,7 @@ input[type=number]:focus + label {
     align-items: center;
     width: 36px;
     height: 36px;
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: black;
@@ -1811,7 +1811,7 @@ input[type=number]:focus + label {
 
 .modal-write-us-form input[placeholder] {
     color: #a9a9a9;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     padding-left: 17px;
 }
@@ -1867,7 +1867,7 @@ input[type=number]:focus + label {
     width: 460px;
     min-height: 100px;
     color: #a9a9a9;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     border: 1px solid #e5e5e5;
     padding-left: 17px;
