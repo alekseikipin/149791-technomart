@@ -90,7 +90,7 @@ a {
     background: #293449;
 }
 
-header {
+.header {
     background: #f4f7f9;
 }
 
@@ -1472,6 +1472,14 @@ footer {
 }
 
 /* filter-header */
+.catalog-content-container fieldset {
+    
+}
+
+.catalog-content-container fieldset:not(:nth-child(4)) {
+    border-bottom: solid 1px #c6c6c6;
+}
+
 .filter-header {
     display: flex;
     justify-content: space-between;
@@ -1572,19 +1580,12 @@ form {
 }
 
 .filter {
-    font-size: 15px;
-    text-transform: uppercase;
-    margin-top: 16px;
-}
-
-fieldset {
     padding: 0;
     margin: 0;
     border: none;
-}
-
-fieldset:not(:nth-child(4)) {
-    border-bottom: solid 1px #c6c6c6;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 16px;
 }
 
 legend {
@@ -1611,7 +1612,7 @@ legend {
     justify-content: space-between;
 }
 
-input[type=number] {
+.catalog-content-container input[type=number] {
     border: none;
     width: 80px;
     height: 38px;
@@ -1625,32 +1626,32 @@ input[type=number] {
     text-align: center;
 }
 
-input[type=number] {
+.catalog-content-container input[type=number] {
     font-size: 17px;
     color: black;
     text-align: center;
 }
 
-input[type=number]::-moz-placeholder {
+.catalog-content-container input[type=number]::-moz-placeholder {
     font-size: 17px;
     color: black;
     text-align: center;
     opacity: 1;
 }
 
-input[type=number]:-ms-input-placeholder {
+.catalog-content-container input[type=number]:-ms-input-placeholder {
     font-size: 17px;
     color: black;
     text-align: center;
 }
 
-input[type=number]::-webkit-input-placeholder {
+.catalog-content-container input[type=number]::-webkit-input-placeholder {
     font-size: 17px;
     color: black;
     text-align: center;
 }
 
-input[type=number]:focus {
+.catalog-content-container input[type=number]:focus {
     background-color: #e7dcc8;
     outline: none;
 }
