@@ -31,7 +31,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 45px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     padding-left: 25px;
     padding-right: 25px;
     font-family: 'Cuprum', sans-serif;
@@ -96,6 +97,7 @@ header {
 .header-top {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .header-navigation-container {
@@ -181,6 +183,8 @@ header {
     background: none;
     fill: white;
     opacity: 0.3;
+    left: 0;
+    top: 0;
 }
 
 .submit svg {
@@ -447,7 +451,7 @@ div > .button:first-child {
 .main-menu {
     display: flex;
     list-style: none;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 890px;
     min-height: 55px;
     padding: 0;
@@ -538,10 +542,11 @@ div > .button:first-child {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     width: 135px;
-    min-height: 38px;
     color: white;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-left: 23px;
 }
 
@@ -657,6 +662,7 @@ div > .button:first-child {
 .popular-content {
     display: flex;
     margin-bottom: 0;
+    flex-wrap: wrap;
 }
 
 .popular-items-card {
@@ -685,6 +691,7 @@ div > .button:first-child {
     margin: 0;
     margin-top: 18px;
     color: black;
+    max-width: 90%;
 }
 
 .popular-items-old-price {
@@ -1030,10 +1037,6 @@ div > .button:first-child {
     overflow: hidden;
 }
 
-/* .slider-service input[type=radio] {
-    display: none;
-} */
-
 .service-controls {
     margin-top: 10px;
 }
@@ -1041,7 +1044,8 @@ div > .button:first-child {
 .service-controls label {
     display: flex;
     width: 220px;
-    min-height: 61px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     background-color: #32425c;
     color: white;
     font-family: 'Cuprum', sans-serif;
@@ -1058,6 +1062,7 @@ div > .button:first-child {
 
 .container-service-description {
     display: flex;
+    position: relative;
     flex-direction: column;
     height: 0;
     width: 700px;
@@ -1070,6 +1075,8 @@ div > .button:first-child {
     width: 800px;
     height: 261px;
     background-repeat: no-repeat;
+    right: -100px;
+    top: 0;
 }
 
 .service-slider-slides .container-service-description:nth-child(1)::after {
@@ -1228,7 +1235,7 @@ footer {
 .footer-menu {
     display: flex;
     list-style: none;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 0;
     margin-top: 23px;
     margin-bottom: 8px;
@@ -1311,7 +1318,7 @@ footer {
 .social-links {
     display: flex;
     list-style: none;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 150px;
     justify-content: space-between;
     align-items: center;
@@ -1413,7 +1420,7 @@ footer {
 .breadcrumbs {
     display: flex;
     list-style: none;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 0;
     padding-top: 10px;
 }
@@ -1461,6 +1468,7 @@ footer {
 .content {
     display: flex;
     flex-wrap: wrap;    
+    max-width: 700px;
 }
 
 /* filter-header */
@@ -1723,7 +1731,7 @@ input[type=number]:focus + label {
 .pagination {
     display: flex;
     list-style: none;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 0;
     margin-top: 52px;
     margin-bottom: 60px;
@@ -1769,31 +1777,29 @@ input[type=number]:focus + label {
 }
 
 /* modal write us*/
-.modal-bg {
+.modal-off {
     display: none;
-    position: fixed;
-    padding-top: 10%;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-on {
+    display: block;
 }
 
 .modal {
-    display: relative;
-    margin: auto;
+    display: block;
+    position: fixed;
+    margin-left: -310px;
+    margin-top: -215px;
+    top: 50%;
+    left: 50%;
     width: 620px;
     min-height: 430px;
     overflow: auto;
     background-color: white;
     box-shadow: 0px 20px 40px rgba(000, 000, 000, 0.7);
-}
-
-.modal-show {
-    display: block;
+    z-index: 999;
+    animation-name: bounce;
+    animation-duration: 0.5s;
 }
 
 .modal-wrapper {
@@ -1812,7 +1818,6 @@ input[type=number]:focus + label {
 .modal-write-us-form input:focus {
     color: black;
 }
-
 
 .modal-close {
     font-size: 0;
@@ -1911,12 +1916,18 @@ input[type=number]:focus + label {
 }
 
 .modal-map {
-    display: relative;
+    position: fixed;
     width: 940px;
     height: 447px;
-    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-top: -223px;
+    margin-left: -470px;
     overflow: auto;
     box-shadow: 0px 20px 40px rgba(000, 000, 000, 0.7);
+    z-index: 998;
+    animation-name: bounce;
+    animation-duration: 0.5s;
 }
 
 .modal-wrapper label {
@@ -1927,4 +1938,35 @@ input[type=number]:focus + label {
     width: 940px; 
     height: 447px;
     border: none;
+}
+
+.modal-bg {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-error {
+    animation-name: shake;
+    animation-duration: 0.5s;
+}
+
+/* animation */
+
+@keyframes bounce {
+    0% {transform: translateY(-2000px);}
+    70% {transform: translateY(30px);}
+    90% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes shake {
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+    20%, 40%, 60%, 80% {transform: translateX(10px);}
 }
