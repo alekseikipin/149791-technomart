@@ -227,7 +227,8 @@ a {
 
 .submit svg {
     position: relative;
-    top: 2px;
+    top: 1px;
+    left: 2px;
 }
 
 .search-input:focus ~ .submit {
@@ -272,6 +273,7 @@ a {
 .cart {
     background-image: url(../img/icons/cart.svg);
     background-position: 17px 12px;
+    padding-right: 2px;
 }
 
 .cart-full {
@@ -406,10 +408,6 @@ a {
 
 .sign-in-button:active .sign-in-svg {
     fill: #b2b2b2;
-}
-
-.button > .sign-in {
-    padding-left: 5px;
 }
 
 .sign-in-button {
