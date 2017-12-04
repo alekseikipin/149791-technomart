@@ -877,7 +877,6 @@ a {
     height: 36px;
     background-color: #ee3643;
     -webkit-transform: rotate(-45deg) scale(0.73);
-        -ms-transform: rotate(-45deg) scale(0.73);
             transform: rotate(-45deg) scale(0.73);
 }
 
@@ -937,8 +936,13 @@ a {
 }
 
 .slider-text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .slider-slides img {
@@ -965,7 +969,6 @@ a {
     border: 2px solid white;
     border-radius: 50%;
     -webkit-transition: background-color 0.2s;
-    -o-transition: background-color 0.2s;
     transition: background-color 0.2s;
     cursor: pointer;
 }
@@ -978,13 +981,11 @@ a {
 
 .btn-1:checked ~ .slider-inner .slider-slides {
     -webkit-transform: translate(0);
-        -ms-transform: translate(0);
             transform: translate(0);
 }
 
 .btn-2:checked ~ .slider-inner .slider-slides {
     -webkit-transform: translate(-620px);
-        -ms-transform: translate(-620px);
             transform: translate(-620px);
 }
 
@@ -1023,11 +1024,9 @@ a {
             box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5);
     -webkit-transition-property: -webkit-box-shadow;
     transition-property: -webkit-box-shadow;
-    -o-transition-property: box-shadow;
     transition-property: box-shadow;
     transition-property: box-shadow, -webkit-box-shadow;
     -webkit-transition-duration: 0.3s;
-         -o-transition-duration: 0.3s;
             transition-duration: 0.3s;
     outline: none;
     left: 0;
@@ -1155,11 +1154,9 @@ a {
             box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5);
     -webkit-transition-property: -webkit-box-shadow;
     transition-property: -webkit-box-shadow;
-    -o-transition-property: box-shadow;
     transition-property: box-shadow;
     transition-property: box-shadow, -webkit-box-shadow;
     -webkit-transition-duration: 0.3s;
-         -o-transition-duration: 0.3s;
             transition-duration: 0.3s;
     outline: none;
 }
@@ -1606,7 +1603,8 @@ a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 140px;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     font-size: 0;
     margin-left: 40px;
     margin-top: 13px;
@@ -2242,8 +2240,12 @@ a {
 }
 
 .modal-cart-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-height: 143px;
     padding-left: 90px;
 }
