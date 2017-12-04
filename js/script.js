@@ -6,8 +6,6 @@ var close = document.getElementById("close");
 var close2 = document.querySelector(".modal-bg");
 var form = modal.querySelector("form");
 var feedback = modal.querySelector("[name=note]");
-var storage = localStorage.getItem("userName");
-var storage2 = localStorage.getItem("email");
 var error = modal.querySelector(".modal");
 
 if (write) {
@@ -16,10 +14,12 @@ write.addEventListener("click", function(evt) {
     modal.classList.add("modal-on");
     customer.focus();
     if (storage) {
+        var storage = localStorage.getItem("userName");
         email.focus();
         customer.value = storage;
     }
     if (storage) {
+        var storage2 = localStorage.getItem("email");
         feedback.focus();
         email.value = storage2;
     }
@@ -37,6 +37,8 @@ close2.addEventListener("click", function() {
 }
 
 if (form) {form.addEventListener("submit", function(evt) {
+    var storage = localStorage.getItem("userName");
+    var storage2 = localStorage.getItem("email");
     if (!customer.value || !email.value || !feedback.value) {
     evt.preventDefault();  
     error.classList.add("modal-error");
@@ -106,3 +108,10 @@ closeBuy.addEventListener("click", function(evt) {
     evt.preventDefault();  
     buy.classList.remove("modal-on");
 });
+
+if (buy) {
+    var closeBuy2 = buy.querySelector(".modal-bg");
+    closeBuy2.addEventListener("click", function() {
+    buy.classList.remove("modal-on");
+});
+}
