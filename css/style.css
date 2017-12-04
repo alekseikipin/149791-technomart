@@ -726,7 +726,6 @@ a {
 .popular-items-button {
     border-radius: 2px;
     width: 253px;
-    min-height: 38px;
     background-color: #ee3643;
     color: white;
     font-size: 14px;
@@ -734,7 +733,7 @@ a {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     text-transform: uppercase;
-    padding: 0;
+    padding: 10px 0;
 }
 
 .popular-items-button:hover,
@@ -903,9 +902,9 @@ a {
     margin-top: 20px;
 }
 
-.slider input[type=radio] {
+/* .slider input[type=radio] {
     display: none;
-}
+} */
 
 .slider-inner {
     width: 620px;
@@ -973,6 +972,13 @@ a {
     cursor: pointer;
 }
 
+.btn-1:focus ~ .slider-controls label[for="btn-1"],
+.btn-2:focus ~ .slider-controls label[for="btn-2"] {
+    outline-color: rgb(77, 144, 254);
+    outline-style: auto;
+    outline-offset: -2px;
+    outline-width: 5px;
+}
 
 .btn-1:checked ~ .slider-controls label[for="btn-1"],
 .btn-2:checked ~ .slider-controls label[for="btn-2"] {
@@ -1052,6 +1058,7 @@ a {
 }
 
 .popular-items-button-buy svg {
+    fill: white;
     top: 9px;
     opacity: 0.3;
     position: absolute;
@@ -1412,13 +1419,11 @@ a {
 }
 
 .popular-items-button-more {
-    padding: 0;
     margin: 0;
     width: 220px;
 }
 
 .popular-items-button-map {
-    padding: 0;
     margin: 0;
     width: 300px;
 }
@@ -1669,9 +1674,7 @@ a {
     width: 160px;
     height: 2px;
     background: #00ca74;
-    background: -webkit-linear-gradient(left,#00ca74 80%, #d7dcde 20%);
-    background: -o-linear-gradient(right,#00ca74 80%, #d7dcde 20%);
-    background: -moz-linear-gradient(right,#00ca74 80%, #d7dcde 20%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(80%, #00ca74), color-stop(20%, #d7dcde));
     background: linear-gradient(to right, #00ca74 80%, #d7dcde 20%);
     left: -13px;
 }
@@ -1897,7 +1900,7 @@ a {
             align-items: center;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
-    padding: 0;
+    padding: 11px 0;    
     margin: 0;
     margin-top: 60px;
     border: solid 1px #e5e5e5;
@@ -1905,7 +1908,6 @@ a {
     text-transform: uppercase;
     font-size: 13px;
     width: 138px;
-    min-height: 38px;
 }
 
 .filter {
@@ -2154,8 +2156,8 @@ a {
 .pagination-button-next {
     font-family: "PT Sans", "Arial", sans-serif;
     text-transform: uppercase;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 30px;
+    width: auto;
 }
 
 .pagination-button:hover,
