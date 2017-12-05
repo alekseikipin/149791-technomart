@@ -631,8 +631,6 @@ a {
     margin-top: 20px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-position: 213px 32px;
-    background-image: url(../img/cards/materials.svg);
     position: relative;
 }
 
@@ -663,7 +661,12 @@ a {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.category-card:nth-child(2) {
+.category-card-container .category-card:nth-child(1) {
+    background-position: 213px 32px;
+    background-image: url(../img/cards/materials.svg);
+}
+
+.category-card-container .category-card:nth-child(2) {
     background-color: #3bbce3;
     background-position: 200px 30px;
     background-image: url(../img/cards/tools.svg);
@@ -678,7 +681,7 @@ a {
     background-position: 191px 32px;
 }
 
-.category-card-container-small .category-card {
+.category-card-container-small .category-card:first-child {
     margin-right: 0px;
     background-color: #8ed78f;
     background-position: 200px 30px;
@@ -902,10 +905,6 @@ a {
     margin-top: 20px;
 }
 
-/* .slider input[type=radio] {
-    display: none;
-} */
-
 .slider-inner {
     width: 620px;
     overflow: hidden;
@@ -976,7 +975,6 @@ a {
 .btn-2:focus ~ .slider-controls label[for="btn-2"] {
     outline-color: rgb(77, 144, 254);
     outline-style: auto;
-    outline-offset: -2px;
     outline-width: 5px;
 }
 
@@ -1105,6 +1103,8 @@ a {
     position: absolute;
     visibility: hidden;   
     background-color: white;
+    left: 0;
+    top: 0;
 }
 
 .popular-items-card:focus-within .card-description-hidden {
@@ -1332,8 +1332,9 @@ a {
 .service-1:focus ~ .service-controls label[for="service-1"],
 .service-2:focus ~ .service-controls label[for="service-2"],
 .service-3:focus ~ .service-controls label[for="service-3"] {
-    border-left: solid 5px #ee3643;
-    margin-left: -5px;
+    outline-color: rgb(77, 144, 254);
+    outline-style: auto;
+    outline-width: 1px;
 }
 
 .service-1:checked ~ .service-slider-inner .service-slider-slides .container-service-description:nth-child(1) {
@@ -1355,7 +1356,7 @@ a {
 }
 
 .service-slider-button {
-    padding: 0;
+    padding: 10px 0;
     margin-left: 78px;
     z-index: 1;
 }
@@ -1459,6 +1460,11 @@ a {
     background-color: #32425c;
 }
 
+.footer-phone {
+    color: white;
+    text-decoration: none;
+}
+
 .footer-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1486,6 +1492,8 @@ a {
     margin-top: 10px;
     width: 338px;
     padding-left: 2px;
+    text-decoration: none;
+    x-ms-format-detection: none;
 }
 
 .footer-menu {
@@ -1740,7 +1748,7 @@ a {
 }
 
 
-.breadcrumbs li a {
+.breadcrumbs-item {
     text-transform: uppercase;
     color: black;
     padding-right: 15px;
@@ -2016,17 +2024,10 @@ a {
     line-height: 25px;
 } 
 
-.manufacturers-checkbox:disabled + label {
-    color: rgba(0,0,0,0.4);
-    background-image: url("../img/icons/checkbox-disabled.svg");
-    background-size: 25px 25px;
-}
-
 .manufacturers-checkbox:focus + label {
     outline-color: rgb(77, 144, 254);
-    outline-offset: -2px;
     outline-style: auto;
-    outline-width: 5px;
+    outline-width: 1px;
 } 
 
 .manufacturers-checkbox:checked + label {
@@ -2041,6 +2042,28 @@ a {
 
 .manufacturers-checkbox:checked:hover + label {
     background-image: url("../img/icons/checkbox-on-hover.svg");
+    background-size: 25px 25px;
+}
+
+.manufacturers-checkbox:disabled + label {
+    color: rgba(0,0,0,0.4);
+    background-image: url("../img/icons/checkbox-disabled.svg");
+    background-size: 25px 25px;
+}
+
+.manufacturers-checkbox:disabled:hover + label {
+    color: rgba(0,0,0,0.4);
+    background-image: url("../img/icons/checkbox-disabled.svg");
+    background-size: 25px 25px;
+}
+
+.manufacturers-checkbox:disabled:checked + label {
+    background-image: url("../img/icons/checkbox-on-disabled.svg");
+    background-size: 25px 25px;
+}
+
+.manufacturers-checkbox:disabled:checked:hover + label {
+    background-image: url("../img/icons/checkbox-on-disabled.svg");
     background-size: 25px 25px;
 }
 
@@ -2078,16 +2101,27 @@ a {
             box-shadow: 0px 0px 0px 4px #b5b5b5;
 }
 
+.drill-type-radio:checked:hover ~ .type::before {
+    -webkit-box-shadow: 0px 0px 0px 4px #b5b5b5;
+            box-shadow: 0px 0px 0px 4px #b5b5b5;
+            background: #b5b5b5;
+}
+
 .drill-type-radio:disabled ~ .type::before {
     -webkit-box-shadow: 0px 0px 0px 4px #e9e9e9;
             box-shadow: 0px 0px 0px 4px #e9e9e9;
 }
 
+.drill-type-radio:checked:disabled ~ .type::before {
+    -webkit-box-shadow: 0px 0px 0px 4px #e9e9e9;
+            box-shadow: 0px 0px 0px 4px #e9e9e9;
+            background: #e9e9e9;
+}
+
 .drill-type-radio:focus + label {
     outline-color: rgb(77, 144, 254);
-    outline-offset: -2px;
     outline-style: auto;
-    outline-width: 5px;
+    outline-width: 1px;
 }
 
 .drill-numbers:focus + label {
