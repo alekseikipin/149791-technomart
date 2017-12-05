@@ -1332,9 +1332,7 @@ a {
 .service-1:focus ~ .service-controls label[for="service-1"],
 .service-2:focus ~ .service-controls label[for="service-2"],
 .service-3:focus ~ .service-controls label[for="service-3"] {
-    outline-color: rgb(77, 144, 254);
-    outline-style: auto;
-    outline-width: 1px;
+    outline: 1px solid #4d90fe;
 }
 
 .service-1:checked ~ .service-slider-inner .service-slider-slides .container-service-description:nth-child(1) {
@@ -2025,9 +2023,7 @@ a {
 } 
 
 .manufacturers-checkbox:focus + label {
-    outline-color: rgb(77, 144, 254);
-    outline-style: auto;
-    outline-width: 1px;
+    outline: 1px solid #4d90fe;
 } 
 
 .manufacturers-checkbox:checked + label {
@@ -2329,20 +2325,25 @@ a {
 .customer {
     width: 220px;
     height: 38px;
+    border: 2px solid #dee3e4;
+    border-radius: 4px;
 }
 
 .email {
     width: 220px;
     height: 38px;
+    border: 2px solid #dee3e4;
+    border-radius: 4px;
 }
 
 .note {
-    width: 460px;
+    width: 439px;
     min-height: 100px;
     color: #a9a9a9;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
-    border: 1px solid #e5e5e5;
+    border: 2px solid #dee3e4;
+    border-radius: 4px;
     padding-left: 17px;
     padding-top: 10px;
     margin-top: 5px;
@@ -2378,7 +2379,7 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 210px;
+    width: 220px;
 }
 
 .modal-write-us-bottom {
