@@ -1491,7 +1491,6 @@ a {
     width: 338px;
     padding-left: 2px;
     text-decoration: none;
-    x-ms-format-detection: none;
 }
 
 .footer-menu {
